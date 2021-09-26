@@ -1,0 +1,1559 @@
+/* font-family: 'Roboto', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    /* background-color: #000206; */
+    min-height: 200vh;
+    background-color: black;
+}
+
+.hotel {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 1440px; */
+    background-color: #191919;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 6vh;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2.5vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+    /* text-shadow: 0 0 2px white; */
+}
+
+h3 {
+    font-size: 3vh;
+    font-family: 'Roboto Slab', serif;
+}
+
+h4 {
+    font-size: 3vh;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!! Header !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.header {
+    position: relative;
+    background-color: #191919;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerBgc {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.photoHeader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 120%;
+    opacity: 0.8;
+}
+
+.headerText {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20vh;
+    width: 60%;
+    align-items: center;
+    line-height: 10vh;
+    z-index: 1;
+    text-shadow: 0 0 4px black;
+}
+
+.headerText p:nth-of-type(1) {
+    font-size: 3vh;
+}
+
+.headerText p:nth-of-type(1) span {
+    letter-spacing: -1px;
+}
+
+.headerText p:nth-of-type(2) {
+    font-size: 8vh;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.navi {
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-basis: 90vw;
+    height: 10vh;
+    font-size: 3vh;
+    background-color: black;
+    color: white;
+}
+
+.logoHCmobile {
+    display: none;
+}
+
+.naviPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 40%;
+}
+
+.naviPage nav {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+}
+
+.naviPage ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-basis: 100%;
+}
+
+.naviPage li {
+    display: flex;
+    flex-basis: 18%;
+    font-size: 14px;
+    text-transform: uppercase;
+    justify-content: center;
+    padding-top: 3vh;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+}
+
+.naviPage li i {
+    padding: 0.5vh 0 0 2vh;
+}
+
+.naviPage li:hover {
+    border-bottom: white solid 2px;
+}
+
+.naviLogo {
+    position: relative;
+    display: flex;
+    flex-basis: 20%;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.logoHC {
+    display: flex;
+    flex-grow: 30%;
+    font-family: 'Allison', cursive;
+    font-size: 7vh;
+    letter-spacing: 2px;
+    height: 9vh;
+    width: 9vh;
+    border-bottom: solid 2px;
+    border-top: solid 2px;
+    border-radius: 50%;
+    margin: 0.5vh;
+    line-height: 10vh;
+    padding: 0vh 0vh 2vh 1vh;
+}
+
+.logoName {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.burger {
+    display: none;
+}
+
+.logoName p:nth-of-type(1) {
+    font-size: 2vh;
+}
+
+.logoName p:nth-of-type(2) {
+    font-size: 3.8vh;
+    font-family: 'Roboto Slab', serif;
+}
+
+.naviBookNow {
+    display: flex;
+    margin-left: 20%;
+    flex-basis: 20%;
+    background-color: #cfa166;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.naviBookNow i {
+    font-size: 4vh;
+    line-height: 10vh;
+    padding-right: 5%;
+    transform-origin: 50% -20%;
+}
+
+.naviBookNow:hover i {
+    animation: rotate .3s linear 1 alternate;
+}
+
+.naviBookNow:hover {
+    opacity: 0.8;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(0);
+    }
+    20% {
+        transform: rotate(20deg);
+    }
+    80% {
+        transform: rotate(-20deg);
+    }
+    90% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.naviBookNow p {
+    font-size: 2.5vh;
+    line-height: 10vh;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+}
+
+@media(orientation: portrait) {
+    .header {
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .header span {
+        display: flex;
+    }
+    .photoHeader {
+        height: 100%;
+    }
+    .headerText {
+        padding-top: 25vh;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 20vh;
+        width: 60%;
+        align-items: center;
+        line-height: 10vh;
+        z-index: 1;
+        text-shadow: 0 0 4px black;
+    }
+    .headerText p:nth-of-type(1) {
+        font-size: 3.5vh;
+        border-bottom: white solid 2px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    .headerText p:nth-of-type(1) span {
+        display: none;
+    }
+    .headerText p:nth-of-type(2) {
+        padding-top: 5vh;
+        font-size: 6vh;
+    }
+    .logoHCmobile {
+        display: flex;
+        flex-grow: 30%;
+        font-family: 'Allison', cursive;
+        font-size: 12vh;
+        letter-spacing: 2px;
+        height: 15vh;
+        width: 15vh;
+        border-bottom: solid 2px;
+        border-top: solid 2px;
+        border-radius: 50%;
+        margin: 0.5vh;
+        line-height: 17vh;
+        padding: 0vh 0vh 2vh 1vh;
+    }
+    .navi {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 2;
+        transition: 0.3s linear;
+    }
+    .burger {
+        display: flex;
+        position: fixed;
+        right: 3vh;
+        top: 3vh;
+        font-size: 10vh;
+        flex-basis: 20%;
+        color: #cfa166;
+        z-index: 5;
+        order: 1;
+        transition: .3s;
+    }
+    .burger i:nth-of-type(1) {
+        color: white;
+        opacity: 0.8;
+        text-shadow: 0 0 4px #000;
+    }
+    .burger:hover {
+        cursor: pointer;
+    }
+    .burger i.off {
+        display: none;
+    }
+    .naviPage .off {
+        display: none;
+    }
+    .navi.off {
+        transform: translateY(-100vh);
+    }
+    .naviLogo {
+        order: 1;
+        flex-basis: 20%;
+        position: absolute;
+        top: 3vh;
+        left: 3vh;
+    }
+    .logoName {
+        height: 100%;
+        padding-left: 10%;
+    }
+    .naviPage {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 60%;
+        transition: 0.3s;
+    }
+    .naviPage nav {
+        display: flex;
+        width: 100%;
+        padding-top: 40%;
+    }
+    .naviPage ul {
+        display: flex;
+        flex-direction: column;
+        margin: 5vh 5vw;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        flex-grow: 1;
+        color: white;
+        text-decoration: none;
+        list-style: none;
+    }
+    .naviPage li {
+        color: white;
+        font-size: 4vh;
+        padding: 1px 20px;
+        margin: 2vh;
+        text-transform: uppercase;
+        border-bottom: solid 2px #cfa166;
+        flex-basis: 15%;
+        text-align: left;
+    }
+    .naviPage li i {
+        padding: 0.5vh 0 0 2vh;
+    }
+    .naviPage li:hover {
+        border-bottom: white solid 2px;
+    }
+    .naviBookNow {
+        order: 3;
+        display: flex;
+        flex-direction: row;
+        margin: 30% 5% auto;
+        flex-basis: 10%;
+        background-color: #cfa166;
+        cursor: pointer;
+    }
+    .naviBookNow i {
+        font-size: 4.5vh;
+        padding-right: 5%;
+    }
+    .naviBookNow p {
+        font-size: 4vh;
+        line-height: 10vh;
+        font-family: 'Roboto Slab', serif;
+        text-transform: uppercase;
+    }
+}
+
+@media(max-width: 1223px) and (orientation: landscape) {
+    .header {
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .header span {
+        display: flex;
+    }
+    .photoHeader {
+        height: 100%;
+    }
+    .headerText {
+        padding-top: 25vh;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 20vh;
+        width: 60%;
+        align-items: center;
+        line-height: 10vh;
+        z-index: 1;
+        text-shadow: 0 0 4px black;
+    }
+    .headerText p:nth-of-type(1) {
+        font-size: 3.5vh;
+        border-bottom: white solid 2px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    .headerText p:nth-of-type(1) span {
+        display: none;
+    }
+    .headerText p:nth-of-type(2) {
+        padding-top: 5vh;
+        font-size: 6vh;
+    }
+    .logoHCmobile {
+        display: flex;
+        flex-grow: 30%;
+        font-family: 'Allison', cursive;
+        font-size: 12vh;
+        letter-spacing: 2px;
+        height: 15vh;
+        width: 15vh;
+        border-bottom: solid 2px;
+        border-top: solid 2px;
+        border-radius: 50%;
+        margin: 0.5vh;
+        line-height: 17vh;
+        padding: 0vh 0vh 2vh 1vh;
+    }
+    .navi {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 2;
+        transition: 0.3s linear;
+        overflow: hidden;
+    }
+    .burger {
+        display: flex;
+        position: fixed;
+        right: 3vh;
+        top: 3vh;
+        font-size: 15vh;
+        flex-basis: 15vh;
+        color: #cfa166;
+        z-index: 5;
+        order: 1;
+        transition: .3s;
+    }
+    .burger i:nth-of-type(1) {
+        color: white;
+        opacity: 0.8;
+        text-shadow: 0 0 4px #000;
+    }
+    .burger:hover {
+        cursor: pointer;
+    }
+    .burger i.off {
+        display: none;
+    }
+    .naviPage .off {
+        display: none;
+    }
+    .navi.off {
+        transform: translateY(-100vh);
+    }
+    .naviLogo {
+        order: 1;
+        flex-basis: 15vh;
+        position: absolute;
+        top: 3vh;
+        left: 3vh;
+    }
+    .logoName {
+        height: 100%;
+        padding-left: 10%;
+    }
+    .naviPage {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 60vh;
+        transition: 0.3s;
+    }
+    .naviPage nav {
+        display: flex;
+        width: 80%;
+        align-self: center;
+        padding-top: 20vh;
+    }
+    .naviPage ul {
+        display: flex;
+        flex-direction: column;
+        margin: 5vh 5vw;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        flex-grow: 1;
+        color: white;
+        text-decoration: none;
+        list-style: none;
+    }
+    .naviPage li {
+        color: white;
+        font-size: 4vh;
+        padding: 1px 20px;
+        margin: 2vh;
+        text-transform: uppercase;
+        border-bottom: solid 2px #cfa166;
+        flex-basis: 15%;
+        text-align: left;
+    }
+    .naviPage li i {
+        padding: 0.5vh 0 0 2vh;
+    }
+    .naviPage li:hover {
+        border-bottom: none;
+    }
+    .naviBookNow {
+        order: 3;
+        display: flex;
+        flex-direction: row;
+        margin: 15vh 15% auto;
+        flex-basis: 10%;
+        background-color: #cfa166;
+        cursor: pointer;
+    }
+    .naviBookNow i {
+        font-size: 4.5vh;
+        padding-right: 5%;
+    }
+    .naviBookNow p {
+        font-size: 4vh;
+        line-height: 10vh;
+        font-family: 'Roboto Slab', serif;
+        text-transform: uppercase;
+    }
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!    aboutUs      !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.aboutUs {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.671);
+    align-items: center;
+}
+
+.leftAbout,
+.rightAbout {
+    position: relative;
+    display: flex;
+    flex-basis: 40%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.leftAbout {
+    height: 100%;
+    width: 100%;
+}
+
+.img1AboutUs {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    height: 80%;
+    width: 70%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.img1AboutUs img {
+    height: 100%;
+}
+
+.img2AboutUs {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    height: 50%;
+    width: 70%;
+    z-index: 2;
+}
+
+.img2AboutUs img {
+    width: 0;
+}
+
+.rightAbout {
+    flex-direction: column;
+}
+
+.rightAbout h1 {
+    margin-top: 20%;
+    padding-left: 10%;
+    flex-basis: 15%;
+}
+
+.rightAbout h1 span {
+    padding-top: 5%;
+    border-top: #cfa166 solid 4px;
+}
+
+.rightAbout h2 {
+    padding-top: 05%;
+    padding-left: 20%;
+    width: 80%;
+}
+
+.butonAbout {
+    padding-top: 10%;
+    padding-left: 20%;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 12vw;
+    height: 6vh;
+}
+
+.butonAbout:hover p {
+    font-size: 2.3vh;
+    opacity: 0.8;
+}
+
+.butonAbout p {
+    display: block;
+    height: 6vh;
+    width: 12vw;
+    background-color: #cfa166;
+    font-size: 2vh;
+    text-transform: uppercase;
+    line-height: 6vh;
+    text-align: center;
+    transition: 0.2s;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@media(orientation: portrait) {
+    .aboutUs {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .leftAbout,
+    .rightAbout {
+        position: relative;
+        display: flex;
+        flex-basis: 50%;
+        height: 50%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .leftAbout {
+        height: 100%;
+        width: 100%;
+        order: 2;
+    }
+    .img1AboutUs {
+        position: absolute;
+        left: 3vh;
+        top: 3vh;
+        height: 90%;
+        width: 90%;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .img1AboutUs img {
+        height: 100%;
+    }
+    .rightAbout {
+        flex-direction: column;
+    }
+    .rightAbout h1 {
+        margin-top: 10%;
+        padding-left: 10%;
+        flex-basis: 15%;
+        width: 80%;
+    }
+    .rightAbout h2 {
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-right: 5%;
+        width: 100%;
+    }
+    .butonAbout {
+        padding-top: 5%;
+        padding-left: 10%;
+        transition: 0.2s;
+        width: 40vw;
+        height: 6vh;
+    }
+    .butonAbout:hover p {
+        font-size: 2.3vh;
+        opacity: 0.8;
+    }
+    .butonAbout p {
+        display: block;
+        height: 6vh;
+        width: 40vw;
+        background-color: #cfa166;
+        font-size: 2vh;
+        text-transform: uppercase;
+        line-height: 6vh;
+        text-align: center;
+        transition: 0.2s;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+}
+
+@media(max-width: 1223px) and (orientation: landscape) {
+    .leftAbout,
+    .rightAbout {
+        position: relative;
+        display: flex;
+        flex-basis: 40%;
+        height: 70%;
+        overflow: hidden;
+    }
+    .leftAbout {
+        height: 100%;
+        width: 100%;
+    }
+    .img1AboutUs {
+        position: absolute;
+        left: 5%;
+        top: 10%;
+        height: 80%;
+        width: 100%;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .img1AboutUs img {
+        height: 100%;
+    }
+    .img2AboutUs {
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+        height: 50%;
+        width: 70%;
+        z-index: 2;
+    }
+    .img2AboutUs img {
+        width: 0;
+    }
+    .rightAbout {
+        flex-direction: column;
+    }
+    .rightAbout h1 {
+        margin-top: 10%;
+        padding-left: 10%;
+        flex-basis: 15%;
+    }
+    .rightAbout h1 span {
+        padding-top: 5%;
+        border-top: #cfa166 solid 4px;
+    }
+    .rightAbout h2 {
+        padding-top: 05%;
+        padding-left: 20%;
+        width: 90%;
+        font-size: 3vh;
+    }
+    .butonAbout {
+        padding-top: 10%;
+        padding-left: 20%;
+        cursor: pointer;
+        transition: 0.2s;
+        width: 20vw;
+        height: 8vh;
+    }
+    .butonAbout:hover p {
+        font-size: 2.3vh;
+        opacity: 0.8;
+    }
+    .butonAbout p {
+        display: block;
+        width: 20vw;
+        height: 8vh;
+        background-color: #cfa166;
+        font-size: 3vh;
+        text-transform: uppercase;
+        line-height: 8vh;
+        text-align: center;
+        transition: 0.2s;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! atraction !!!!!!!!!!!!!!!!!!!!!!!! */
+
+.ourAttrac {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bcgAttrac {
+    display: flex;
+    margin: auto 0;
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bcgAttrac img {
+    margin: 0 auto;
+    height: 100%;
+    transform: scale(1.4);
+    opacity: 0.8;
+}
+
+.descripAttrac {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    height: 80%;
+    width: 35%;
+    background-color: #cfa166;
+    padding: 5%;
+    color: rgba(255, 255, 255, 0.671);
+}
+
+.descripAttrac h1 {
+    text-align: left;
+    padding: 5%;
+}
+
+.descripAttrac h2 {
+    padding: 5%;
+    padding-bottom: 10%;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.iconAttrac {
+    padding-left: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 45%;
+    /* background-color: black; */
+    padding-top: 5%;
+}
+
+.attrac {
+    display: flex;
+    flex-basis: 45%;
+    flex-grow: 2;
+    font-size: 2.3vh;
+}
+
+@media(orientation: portrait) {
+    .descripAttrac {
+        top: 40%;
+        left: 10%;
+        height: 60%;
+        width: 80%;
+    }
+    .descripAttrac h1 {
+        text-align: left;
+        padding: 0%;
+    }
+    .attrac {
+        display: flex;
+        flex-basis: 45%;
+        flex-grow: 2;
+        font-size: 2.3vh;
+    }
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!  rooms   !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.rooms {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    flex-basis: 170vh;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.671);
+}
+
+.roomTitle {
+    display: flex;
+    flex-basis: 20vh;
+}
+
+.roomTitle h1 {
+    line-height: 20vh;
+}
+
+.roomGallery {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 150vh;
+}
+
+.roomsRoom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-basis: 50vh;
+}
+
+.roomsRoomImg {
+    display: flex;
+    height: 50vh;
+    flex-basis: 50%;
+    overflow: hidden;
+}
+
+.order {
+    order: -1;
+}
+
+.roomsRoomImg img {
+    height: 100%;
+}
+
+.roomsRoomText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50vh;
+    flex-basis: 50%;
+    padding: 5%;
+}
+
+.roomType {
+    font-size: 3.5vh;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Roboto Slab', serif;
+}
+
+.roomDisk {
+    font-size: 2.3vh;
+    letter-spacing: 1px;
+}
+
+.roomIcon {
+    display: flex;
+    justify-content: space-around;
+}
+
+.roomIcon i {
+    padding-right: 1.5vh;
+    font-size: 3vh;
+}
+
+.roomIcon p {
+    text-transform: uppercase;
+    font-size: 2vh;
+    letter-spacing: 1px;
+}
+
+.roomIcon span {
+    padding-right: 1vh;
+    font-weight: 600;
+}
+
+.buttonRoom {
+    cursor: pointer;
+    transition: 0.2s;
+    width: 12vw;
+}
+
+.buttonRoom:hover p {
+    font-size: 2.3vh;
+    opacity: 0.8;
+}
+
+.buttonRoom p {
+    display: block;
+    height: 6vh;
+    width: 100%;
+    background-color: #cfa166;
+    font-size: 2vh;
+    text-transform: uppercase;
+    line-height: 6vh;
+    text-align: center;
+    transition: 0.2s;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@media(orientation: portrait) {
+    .rooms {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        flex-basis: 320vh;
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.671);
+    }
+    .roomTitle {
+        display: flex;
+        flex-basis: 20vh;
+        padding-top: 5%;
+    }
+    .roomTitle h1 {
+        line-height: 10vh;
+    }
+    .roomGallery {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 300vh;
+    }
+    .roomsRoom {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        flex-basis: 100vh;
+        overflow: hidden;
+        border-top: solid 2px white;
+        border-bottom: solid 2px black;
+        margin: 5% 0;
+    }
+    .roomsRoomImg {
+        display: flex;
+        width: 100%;
+        flex-basis: 50vh;
+        padding: 0;
+        order: 4;
+    }
+    .order {
+        order: 1;
+    }
+    .roomsRoomImg img {
+        height: 100%;
+        transform: translateX(-25%);
+    }
+    .roomsRoomText {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        flex-basis: 50vh;
+        padding: 0;
+    }
+    .roomType {
+        font-size: 5vh;
+        padding: 0;
+    }
+    .roomDisk {
+        font-size: 2.3vh;
+        letter-spacing: 1px;
+    }
+    .roomIcon {
+        display: flex;
+        justify-content: space-around;
+    }
+    .roomIcon i {
+        padding-right: 1.5vh;
+        font-size: 3vh;
+    }
+    .roomIcon p {
+        text-transform: uppercase;
+        font-size: 2vh;
+        letter-spacing: 1px;
+    }
+    .roomIcon span {
+        padding-right: 1vh;
+        font-weight: 600;
+    }
+    .buttonRoom {
+        cursor: pointer;
+        transition: 0.2s;
+        width: 40vw;
+        height: 6vh;
+    }
+    .buttonRoom:hover p {
+        font-size: 2vh;
+        opacity: 0.8;
+    }
+    .buttonRoom p {
+        display: block;
+        height: 6vh;
+        width: 100%;
+        background-color: #cfa166;
+        font-size: 2vh;
+        text-transform: uppercase;
+        line-height: 6vh;
+        text-align: center;
+        transition: 0.2s;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+}
+
+@media(max-width: 1223px) and (orientation: landscape) {
+    .roomGallery {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 300vh;
+    }
+    .roomsRoom {
+        display: flex;
+        flex-basis: 100%;
+        margin: 5% 0;
+        border-top: white 2px solid;
+        border-bottom: white 2px solid;
+    }
+    .roomsRoomImg {
+        display: flex;
+        width: 100%;
+        flex-basis: 50%;
+        padding: 0;
+        order: 4;
+    }
+    .order {
+        order: 5;
+    }
+    .roomsRoomText {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        flex-basis: 50%;
+        padding-left: -5%;
+    }
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!  opinions   !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.opinions {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bcgOpinion {
+    display: flex;
+    margin: auto 0;
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bcgOpinion img {
+    margin: 0 auto;
+    height: 100%;
+    opacity: 0.9;
+}
+
+.discripOpinion {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    right: 55%;
+    height: 80%;
+    width: 35%;
+    background-color: #cfa166;
+    padding: 5%;
+    color: rgba(255, 255, 255, 0.671);
+}
+
+.discripOpinion h1 {
+    text-align: left;
+    padding: 5%;
+}
+
+.discripOpinion h2 {
+    padding: 5%;
+    padding-bottom: 10%;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 3.5vh;
+    font-family: 'Allison', cursive;
+}
+
+.opinionWho {
+    padding-left: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 10vh;
+}
+
+.opinionWhoPhotos {
+    display: flex;
+    width: 10vh;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.opinionWhoPhotos img {
+    height: 100%;
+}
+
+.opinionWho p {
+    line-height: 10vh;
+    padding-left: 2vh;
+    font-size: 3.5vh;
+    font-family: 'Allison', cursive;
+}
+
+@media(orientation: portrait) {
+    .discripOpinion {
+        top: 10%;
+        left: 10%;
+        height: 80%;
+        width: 80%;
+    }
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!    Restaurant !!!!!!!!!!!!!!!!!!!!!!!! */
+
+.restaurant {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    color: white;
+    justify-content: center;
+}
+
+.restGallery {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.resta {
+    position: relative;
+    display: flex;
+    flex-basis: 33%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.restaImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.restaImg img {
+    height: 100%;
+}
+
+.restaText {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    text-align: center;
+    height: 20%;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.restaText h3 {
+    font-size: 5vh;
+    text-transform: uppercase;
+    padding: 5%;
+    letter-spacing: 2px;
+}
+
+.restaText h4 {
+    font-size: 3vh;
+    text-transform: uppercase;
+}
+
+.restaImg:hover {
+    opacity: 1;
+}
+
+.restaImg:hover .restaText {
+    transform: scale(1.1);
+}
+
+@media(orientation: portrait) {
+    .restaurant {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 100vh;
+        margin: 5% auto 0;
+        color: white;
+        justify-content: flex-end;
+    }
+    .restGallery {
+        height: 85vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        padding-bottom: 5%;
+    }
+    .resta {
+        position: relative;
+        display: flex;
+        flex-basis: 32%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .restaImg {
+        width: 100%;
+        height: 100%;
+    }
+    .restaImg img {
+        width: 100%;
+    }
+    .restaText {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+/* @media(orientation: portrait)  */
+
+
+/* @media(max-width: 1223px) and (orientation: landscape)
+{} */
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!! galery     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.gallery {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.671);
+}
+
+.galleryDisc {
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+}
+
+.galleryDisc h1 {
+    display: flex;
+    align-self: center;
+}
+
+.gallerySlider {
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+    justify-content: space-around;
+}
+
+.gallerySlider div {
+    flex-basis: 15%;
+    height: 30vh;
+    background-color: #000;
+    overflow: hidden;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.gallerySlider img {
+    height: 100%;
+}
+
+.gallerySlider div:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media(orientation: portrait) {
+    .gallery {
+        width: 100%;
+        height: 100vh;
+    }
+    .galleryDisc {
+        display: flex;
+        height: 20vh;
+        justify-content: center;
+    }
+    .galleryDisc h1 {
+        display: flex;
+        align-self: center;
+    }
+    .gallerySlider {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .gallerySlider div {
+        flex-basis: 45%;
+        height: 90%;
+        padding-bottom: 2vh;
+        background-color: transparent;
+        overflow: hidden;
+    }
+    .gallerySlider img {
+        height: 100%;
+        transform: translateX(-20%) scale(1.4);
+    }
+    .gallerySlider div:hover {
+        opacity: 1;
+        z-index: 5;
+        transform: scale(1.1);
+    }
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!    contact !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.671);
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: row;
+    padding: 5% 10%;
+    height: 100%;
+    width: 100%;
+}
+
+.contactTel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 20%;
+    font-size: 2.5vh;
+}
+
+.contactTel p {
+    padding-left: 10%;
+    padding-bottom: 3%;
+}
+
+.contactTel p:nth-of-type(1) {
+    font-size: 4vh;
+    font-weight: 600;
+    padding: 10%;
+}
+
+@media(orientation: portrait) {
+    .contactTel {
+        width: 100%;
+    }
+}
+
+
+/* @media(max-width: 1223px) and (orientation: landscape)
+{} */
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!       Footer !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+footer {
+    display: flex;
+    flex-basis: 7vh;
+    background-color: #000;
+    color: white;
+    justify-content: center;
+    line-height: 7vh;
+    border-top: rgba(255, 255, 255, 0.5) 3px solid;
+    width: 100%;
+}
